@@ -12,7 +12,7 @@ import DrawerLayout from "./components/DrawerLayout";
 export default function Layout({children}) {
   return (
     <HelmetProvider>
-    <Router basename={process.env.BASENAME}>
+    <Router basename="/shm-node-reward-calculator">
       <Helmet>
         <title>Shardeum Issuance</title>
         <meta name="description" content="Shardeum Issuance"/>
