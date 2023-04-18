@@ -16,12 +16,12 @@ export default function Layout({children}) {
       <Helmet>
         <title>Shardeum Node reward Calculator</title>
         <meta name="description" content="Shardeum node reward calculator (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today."/>
-        <meta property="og:title" content="Shardeum Node reward Calculator">
-        <meta property="og:site_name" content="Shardeum">
-        <meta property="og:url" content="https://shardeum.org/">
-        <meta property="og:description" content="Shardeum node reward calculator (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today.">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://shardeum.org/explore/wp-content/uploads/2023/04/Shardeum-Node-Reward-Calculator.jpg">
+        <meta property="og:title" content="Shardeum Node reward Calculator"/>
+        <meta property="og:site_name" content="Shardeum"/>
+        <meta property="og:url" content="https://shardeum.org/"/>
+        <meta property="og:description" content="Shardeum node reward calculator (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://shardeum.org/explore/wp-content/uploads/2023/04/Shardeum-Node-Reward-Calculator.jpg"/>
         <link rel="icon" href="/favicon.ico"/>
       </Helmet>
       <main className="main py-5 px-5 md:px-20 ml-auto mr-auto  md:max-w-[75rem]">
