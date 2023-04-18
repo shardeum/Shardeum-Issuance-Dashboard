@@ -31,6 +31,9 @@ export default class AprCalc extends React.Component {
     CustomDisabled: true
   };
 
+
+
+
   componentDidMount() {
     this.setState({
       AvgTxFee: this.state.TXfees * 2,

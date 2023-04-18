@@ -6,8 +6,15 @@ import Apr from './pages/Apr';
 import Emissions from './pages/Emissions';
 import Simulations from './pages/Simulations';
 import Parameters from './pages/Parameters';
-
 import DrawerLayout from "./components/DrawerLayout";
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-N6NTB5C',
+}
+
+TagManager.initialize(tagManagerArgs)
+
 
 export default function Layout({children}) {
   return (
