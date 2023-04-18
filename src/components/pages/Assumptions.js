@@ -15,9 +15,16 @@ import {MonthlySHMData} from '.././components/MonthlySHMData.js';
 import {InclusionData} from '.././components/InclusionData.js';
 import {NetworkData} from '.././components/NetworkData.js';
 import {RewardData} from '.././components/RewardData.js';
+import {ScalingData} from '.././components/ScalingData.js';
+import {LinearData} from '.././components/LinearData.js';
+import {EthModelData} from '.././components/EthModelData.js';
+import {AlgoModelData} from '.././components/AlgoModelData.js';
 import ComboChart from ".././components/LineChart2";
 import LineChart from ".././components/LineChart3";
 import LineChart2 from ".././components/LineChart4";
+import ScalingChart from ".././components/ScalingChart";
+import SAChart from ".././components/SAChart";
+import EthChart from ".././components/EthChart";
 import StabilityFactor from ".././components/StabilityFactor";
 import TPSCalc from ".././components/TPSCalc";
 
@@ -92,6 +99,74 @@ export default function Emissions() {
     ]
   });
 
+
+  const [chartData4] = useState({
+    labels: ScalingData.map((data) => data.Year),
+    datasets: [
+ {
+        label: 'Reward Scaling',
+        data: ScalingData.map((data) => data.Reward),
+        yAxisID: 'y',
+      }, {
+
+      label: 'Reward Linear',
+      data: LinearData.map((data) => data.Reward),
+      yAxisID: 'y',
+    }
+
+
+    ]
+  });
+
+
+
+  const [chartData5] = useState({
+    labels: EthModelData.map((data) => data.Day),
+    datasets: [
+ {
+        label: 'Ethereum Model APR %',
+        data: EthModelData.map((data) => data.APR_Multi),
+        yAxisID: 'y',
+      },
+
+
+      {
+             label: 'Algorand Model APR %',
+             data: AlgoModelData.map((data) => data.APR_Multi),
+             yAxisID: 'y1',
+           },
+
+    ]
+  });
+
+
+
+
+  const [chartData6] = useState({
+    labels: EthModelData.map((data) => data.Day),
+    datasets: [
+ {
+        label: 'Ethereum Model Max S:A Ratio',
+        data: EthModelData.map((data) => data.Max_SA_Ratio),
+        yAxisID: 'y',
+      },
+
+      {
+             label: 'Algorand Model Max S:A Ratio',
+             data: AlgoModelData.map((data) => data.Max_SA_Ratio),
+             yAxisID: 'y1',
+           },
+
+
+
+    ]
+  });
+
+
+
+
+
+
   return (<div className="App pt-5">
 
 
@@ -165,13 +240,26 @@ export default function Emissions() {
 
       <TPSCalc/>
 
-        <p className="py-5 font-bold">
-          Demo issuance failure with Linear or Scaling issuance
-        </p>
 
-        <p className="py-5 font-bold">
-          Maximum Profitable S:A Ratio Based on Pre-defined Issuance
-        </p>
+        <h2 className="text-lg py-5 font-bold">Linear and Scaling Pre-defined Distribution via Example</h2>
+
+          <p className="pt-5">Dan add explanation</p>
+
+
+
+    <ScalingChart chartData={chartData4}/>
+
+
+
+      <h2 className="text-lg py-5 font-bold">  Demo issuance failure with Linear or Scaling issuance</h2>
+
+        <EthChart chartData={chartData5}/>
+
+
+    <h2 className="text-lg py-5 font-bold">Maximum Profitable S:A Ratio Based on Pre-defined Issuance</h2>
+
+          <SAChart chartData={chartData6}/>
+
 
 
   </div>);
