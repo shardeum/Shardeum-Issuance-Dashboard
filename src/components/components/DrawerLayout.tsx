@@ -23,7 +23,7 @@ function Nav() {
                     ? "pending"
                     : isActive
                       ? "nav-link border-b-2 border-b-white px-5 -mb-0.5 text-white px-5 active"
-                      : "nav-link px-5 -mb-0.5 text-white px-5"}>Assumptions</NavLink>
+                      : "nav-link px-5 -mb-0.5 text-white px-5"}>Background</NavLink>
                 <NavLink to={'/Emissions'} className={(
                     {isActive, isPending}) => isPending
                     ? "pending"
@@ -77,7 +77,7 @@ function Nav() {
                 ? "pending"
                 : isActive
                   ? "text-gray-300   hover:text-white block px-3 py-2 text-base font-medium active"
-                  : "text-gray-300   hover:text-white block px-3 py-2  text-base font-medium"}>Assumptions</NavLink>
+                  : "text-gray-300   hover:text-white block px-3 py-2  text-base font-medium"}>Background</NavLink>
             <NavLink to={'/Emissions'} onClick={() => {
                 setIsOpen(!isOpen);
                 lockScroll()

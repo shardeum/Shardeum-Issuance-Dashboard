@@ -71,7 +71,7 @@ export default class TPSCalc extends React.Component {
 
           <h2 className="text-lg font-bold pb-5">Sharded Network TPS calculation (horizontal scaling)</h2>
           <div className="form-control min-h-200">
-            <RangeSlider title={"Active Validator Nodes"} id="ActiveValidatorsShardeum" desc={"Active Nodes"} max={10000} start={1300} onSliderChange={this.onSliderChange}/>
+            <RangeSlider title={"Active Validator Nodes"} id="ActiveValidatorsShardeum" desc={"Active Nodes"} max={100000} start={1300} onSliderChange={this.onSliderChange}/>
           </div>
 
 
@@ -129,7 +129,7 @@ export default class TPSCalc extends React.Component {
 
       <h2 className="text-lg font-bold pb-5">Non-Sharded Network TPS calculation (vertical scaling)</h2>
       <div className="form-control min-h-200">
-        <RangeSlider title={"Active Validator Nodes"} id="ActiveValidatorsNonSharded" desc={"Active Nodes"} max={10000} start={1300} onSliderChange={this.onSliderChange2}/>
+        <RangeSlider title={"Active Validator Nodes"} id="ActiveValidatorsNonSharded" desc={"Active Nodes"} max={100000} start={1300} onSliderChange={this.onSliderChange2}/>
       </div>
 
 

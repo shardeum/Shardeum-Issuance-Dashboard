@@ -847,7 +847,7 @@ export default class Simulations extends React.Component {
           </label>
           <div className="tooltip" data-tip="Determines security and redundancy of the network">
             <label className="input-group">
-              <input type="text" value={this.state.NodesPerShard} className="input input-bordered" disabled="disabled" onChange={this.onNodesPerShardChange}/>
+              <input type="text" value={this.state.NodesPerShard} className="input input-bordered"  onChange={this.onNodesPerShardChange}/>
               <span>Nodes</span>
             </label>
           </div>
@@ -859,7 +859,7 @@ export default class Simulations extends React.Component {
           </label>
           <div className="tooltip" data-tip="This is the minimum number of nodes the network must have regardless of how low the TPS is. This is needed in order to maintain a certain level of decentralization.">
             <label className="input-group">
-              <input type="text" value={this.state.MinNodes} className="input input-bordered" disabled="disabled" onChange={this.onMinNodesChange}/>
+              <input type="text" value={this.state.MinNodes} className="input input-bordered"  onChange={this.onMinNodesChange}/>
               <span>Nodes</span>
             </label>
           </div>
@@ -998,7 +998,7 @@ If Standby ratio < 1 then set it to 1
 
       <div className="form-control min-h-200">
         <label className="label">
-          <span className="label-text">Sever Rent $/hr</span>
+          <span className="label-text">Server Rent $/hr</span>
         </label>
         <div className="tooltip" data-tip="On Linode.com $0.20/hr gets
 8 core

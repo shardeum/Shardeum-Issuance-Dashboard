@@ -397,7 +397,7 @@ If Standby ratio < 1 then set it to 1
 
       <div className="form-control min-h-200">
         <label className="label">
-          <span className="label-text">Sever Rent $/hr</span>
+          <span className="label-text">Server Rent $/hr</span>
         </label>
         <div className="tooltip" data-tip="On Linode.com $0.20/hr gets
 8 core

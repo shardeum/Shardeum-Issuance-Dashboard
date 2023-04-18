@@ -45,7 +45,7 @@ function LineChart({chartData}) {
         responsive: true,
         plugins: {
           tooltip: {
-            enabled: false,
+            enabled: true,
               callbacks: {
                   label: function(context) {
                       let label = context.dataset.label || '';

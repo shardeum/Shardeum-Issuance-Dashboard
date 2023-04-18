@@ -69,11 +69,11 @@ export default function Emissions() {
 
   return (<div className="App pt-5">
     <h2 className="text-lg font-bold">Shardeum Distribution</h2>
-    <p className="pt-5">49% of total SHM supply will be given out at genesis to the Foundation, Ecosystem, Team and Sale accounts. The remaining 51% will be issued via node reward.</p>
+    <p className="pt-5">49% of the SHM supply (248,920,000 SHM) will be given to the Foundation, Ecosystem, Team, and Sale accounts at genesis. The remaining 51% will be available as node reward; this maximum supply (259,080,000 SHM) should never be reached (check simulations tab).</p>
     <p className="py-5">The below graphs show SHM distribution at a token (graph 1) and percentage (graph 2) level.</p>
 
     <div className="flex-1 flex-col sm:flex sm:flex-row">
-      <BarChart chartData={chartData2}/>
+      <BarChart plugins={[ChartDataLabels]} chartData={chartData2}/>
       <PieChart plugins={[ChartDataLabels]} chartData={chartData3}/>
     </div>
     <h2 className="text-lg font-bold pt-10">Shardeum Emissions</h2>
@@ -84,7 +84,7 @@ export default function Emissions() {
     <p className="py-5 font-bold ">The following accounts will start receiving SHM 3 months (90 days) after the mainnet launch in 730 daily installments:</p>
     <li>Team account 15% of 508M; 76.2M SHM; about 104,383 SHM per day after 90 days</li>
     <li>Sale account 18% of 508M; 91.44M SHM; about 125,260 SHM per day after 90 days</li>
-    <p className="py-5">The remaining 51% is set aside for node rewards; these coins get created when given starting at mainnet launch based on the node reward setting we chose. (see Parameters and Simulation tabs)</p>
+    <p className="py-5">The remaining 51% is set aside for node rewards; these coins get created when given starting at mainnet launch based on the node reward setting we chose. (see parameters and simulation tabs)</p>
     <LineChart chartData={chartData}/>
 
     <p className="py-5">The graph above shows the liquid supply of SHM in the 820 days after network genesis, this encompasses the entire vesting period of the Team and Sale SHM.
