@@ -3,7 +3,7 @@ import React from "react";
 export default class StabilityFactor extends React.Component {
   state = {
     SHMGenPrice: 5,
-    SHMStablePrice: 5,
+    SHMStablePrice: 10,
     StakeReqSHM: 500,
     StakeReqUSD: 1000,
     TargetTxFee: 0.01,
@@ -50,11 +50,11 @@ export default class StabilityFactor extends React.Component {
    UpdateUSDFees = (event) => {
 
      this.setState({
-         TxFeeUSD: this.state.TxFeeSHM * this.state.SHMStablePrice
+         TxFeeUSD: this.state.TxFeeSHM * (this.state.SHMStablePrice / this.state.SHMGenPrice )
      });
 
      this.setState({
-         StakeReqSHM: this.state.StakeReqUSD / this.state.SHMStablePrice
+         StakeReqSHM:  (this.state.SHMGenPrice / this.state.SHMStablePrice) * this.state.StakeReqUSD
      });
    }
 
@@ -74,7 +74,7 @@ export default class StabilityFactor extends React.Component {
             </label>
             <div className="tooltip" data-tip="Price of SHM in $ at network genesis">
               <label className="input-group">
-                <input type="text" value={this.state.SHMGenPrice} className="input input-bordered" id="SHMGenPrice" disabled onChange={this.onUpdate}/>
+                <input type="text" value={this.state.SHMGenPrice} className="input input-bordered" id="SHMGenPrice"  onChange={this.onUpdate}/>
                 <span>USD</span>
               </label>
             </div>
@@ -119,7 +119,7 @@ export default class StabilityFactor extends React.Component {
                       {this.state.TxFeeSHM.toFixed(6)}
                     </div>
                     <div className="stat-desc">
-                      Target TX Fee / SHM Price / SHM Price
+                      Target TX Fee / SHM Price
                     </div>
                   </div>
                 </div>
