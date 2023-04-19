@@ -204,7 +204,7 @@ export default function Emissions() {
 
     <h2 className="text-lg font-bold">What is SHM Stable Price?</h2>
     <p className="py-5">
-      The Stable Price is simply the average of the recent SHM price. For example the average SHM spot price over the last 5 days. The Stable Price is updated and posted to an account in the Shardeum network once a day and becomes available for the algorithms in the network to use. For example if the node reward is set to $1/hour and the Stable Price is set to $2, then if a node earned $24 it would receive 12 SHM as the reward. Likewise the Stable Price is used to determine the SHM amount for transaction fees and validator staking based on the USD amounts set by the FDAO. This ensures that even if the SHM price is very volatile, the transaction fees, the node reward and staking amounts will be stable in terms of the USD.
+      The Stable Price is simply the average of the recent SHM price. For example the average SHM spot price over the last 5 days. The Stable Price is updated and posted to an account in the Shardeum network once a day and becomes available for the algorithms in the network to use. For example if the node reward is set to $1/hour and the Stable Price is set to $2, then if a node earned $24 it would receive 12 SHM as the reward. Likewise the Stable Price is used to determine the SHM amount for transaction fees and validator staking based on the USD amounts set by the FDAO. This ensures that even if the SHM price is very volatile, the transaction fees, the node reward and staking amounts will be stable in terms of the USD. The Stable Price is posted autonomously by an Oracle, but can be overwritten by the FDAO in case of any failures.
 
 
 
