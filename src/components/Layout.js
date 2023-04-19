@@ -19,18 +19,15 @@ TagManager.initialize(tagManagerArgs)
 export default function Layout({children}) {
   return (
     <HelmetProvider>
-    <Router basename="/shm-tokenomics">
+    <Router basename="">
       <Helmet>
-        <!-- HTML Meta Tags -->
         <title>SHM Tokenomics | Calculate Your Validator Earnings</title>
         <meta name="description" content="Shardeum SHM issuance (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today">
-        <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://shardeum.org">
         <meta property="og:type" content="website">
         <meta property="og:title" content="SHM Tokenomics | Calculate Your Validator Earnings">
         <meta property="og:description" content="Shardeum SHM issuance (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today">
         <meta property="og:image" content="https://shardeum.org/blog/wp-content/uploads/2023/04/SHM-tokenomics-min.jpg">
-        <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="shardeum.org">
         <meta property="twitter:url" content="https://shardeum.org">
