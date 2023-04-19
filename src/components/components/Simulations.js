@@ -760,7 +760,7 @@ export default class Simulations extends React.Component {
 
       <div className="chartCard">
         <div className="chartBox">
-          <button className="btn secondary hidden sm:block " onClick={this.onToggleChart}>Toogle View</button>
+          <button className="btn secondary hidden sm:block " onClick={this.onToggleChart}>Toggle View</button>
           <div className="flex-1 min-w-full apr-stats items-center">
             <div className="stats shadow">
               <div className="stat">
