@@ -1019,7 +1019,7 @@ If Standby ratio < 1 then set it to 1
         </label>
         <div className="tooltip" data-tip="Cool TPS per node; about 20% of Max TPS; node can easily handle this TPS.">
           <label className="input-group">
-            <input type="text" value={this.state.TPSPerNode} className="input input-bordered" disabled="disabled" onChange={this.onTPSPerNodeChange}/>
+            <input type="text" value={this.state.TPSPerNode} className="input input-bordered"  onChange={this.onTPSPerNodeChange}/>
             <span>TPS</span>
           </label>
         </div>
