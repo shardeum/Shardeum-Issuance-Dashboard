@@ -4,7 +4,7 @@ export default class StabilityFactor extends React.Component {
   state = {
     SHMGenPrice: 5,
     SHMStablePrice: 10,
-    StakeReqSHM: 500,
+    StakeReqSHM: 100,
     StakeReqUSD: 1000,
     TargetTxFee: 0.01,
     TxFeeSHM: 0.005000,
@@ -54,7 +54,7 @@ export default class StabilityFactor extends React.Component {
      });
 
      this.setState({
-         StakeReqSHM:  (this.state.SHMGenPrice / this.state.SHMStablePrice) * this.state.StakeReqUSD
+         StakeReqSHM:  this.state.StakeReqUSD / this.state.SHMStablePrice
      });
    }
 
