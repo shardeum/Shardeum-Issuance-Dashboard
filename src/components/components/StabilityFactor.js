@@ -165,7 +165,7 @@ export default class StabilityFactor extends React.Component {
         {this.state.StakeReqSHM.toFixed(0)}
       </div>
       <div className="stat-desc">
-        Required Stake (SHM) / SHM Price
+        Required Stake (USD) / Stable Price
       </div>
     </div>
   </div>
