@@ -1,8 +1,8 @@
 // components/LineChart.js
 import React from "react";
 import {Line} from "react-chartjs-2";
-function ScalingChart({chartData}) {
-  return (<div className="chart-container">
+function ScalingChart({chartData, title}) {
+  return (<div className="chart-container sm:max-w-[50%]">
     <Line data={chartData} options={{
           maintainAspectRatio: false,
 
@@ -40,30 +40,6 @@ function ScalingChart({chartData}) {
           },
 
 
-          y1: {
-
-               position: 'right',
-
-            ticks: {
-                // Include a dollar sign in the ticks
-                callback: function(value, index, ticks) {
-                    return value;
-                },
-                 display: true
-            },
-            title: {
-              color: 'White',
-              display: true,
-              text: 'APR%',
-              border: {
-                color: 'white'
-              }
-            }
-          },
-
-
-
-
 
         },
 
@@ -75,7 +51,7 @@ function ScalingChart({chartData}) {
           },
           title: {
             display: true,
-            text: "Ethereum vs Algorand APY% (with sharding)"
+            text: title
           },
           legend: {
             display: true

@@ -127,13 +127,21 @@ export default function Emissions() {
         label: 'Ethereum Model APR %',
         data: EthModelData.map((data) => data.APR_Multi),
         yAxisID: 'y',
-      },
+      }
 
+
+    ]
+  });
+
+
+  const [chartData7] = useState({
+    labels: EthModelData.map((data) => data.Day),
+    datasets: [
 
       {
              label: 'Algorand Model APR %',
              data: AlgoModelData.map((data) => data.APR_Multi),
-             yAxisID: 'y1',
+             yAxisID: 'y',
            },
 
     ]
@@ -151,10 +159,24 @@ export default function Emissions() {
         yAxisID: 'y',
       },
 
+
+
+
+
+    ]
+  });
+
+
+
+  const [chartData8] = useState({
+    labels: EthModelData.map((data) => data.Day),
+    datasets: [
+
+
       {
              label: 'Algorand Model Max S:A Ratio',
              data: AlgoModelData.map((data) => data.Max_SA_Ratio),
-             yAxisID: 'y1',
+             yAxisID: 'y',
            },
 
 
@@ -243,24 +265,53 @@ export default function Emissions() {
 
         <h2 className="text-lg py-5 font-bold">Linear and Scaling Pre-defined Distribution via Example</h2>
 
-          <p className="pt-5">Dan add explanation</p>
+          <p className="pb-5">The traditional approaches to issuance are pre-scheduled scaling or linear issuance. The scaling model used in Bitcoin reduces the block reward (halving) approximately every 4 years in an attempt to offset the increase in bitcoin (BTC) price.
+
+The linear approach is simply issuing a set amount of the network's native asset over a standard period, such as a day, week or year.</p>
 
 
 
     <ScalingChart chartData={chartData4}/>
 
+    <h2 className="text-lg py-5 font-bold">APY% Model Based on Ethereum and Algorand Data</h2>
+
+      <p className="pb-5">
+        The graphs below demonstrate how following a pre-defined issuance schedule with a horizontally scaling architecture results in massive fluctuations in APY%. In the bull case (Ethereum), the native asset increases in value rapidly, causing the network to become wildly profitable for node operators and resulting in the network becoming inefficient (delivering a higher APR% than needed).
+
+In the bare case (Alogrand), the price of the native asset decreases, this results in the network becoming unprofitable for node providers (delivering negative APR% returns). The likely outcome would be a massive reduction in node operators; this causes significant problems for horizontally scaling networks, which could mean the network loses its ability to scale (increase TPS).
+      </p>
 
 
-      <h2 className="text-lg py-5 font-bold">  Demo issuance failure with Linear or Scaling issuance</h2>
-
-        <EthChart chartData={chartData5}/>
+<div className="flex-1 flex-col sm:flex sm:flex-row">
 
 
-    <h2 className="text-lg py-5 font-bold">Maximum Profitable S:A Ratio Based on Pre-defined Issuance</h2>
-
-          <SAChart chartData={chartData6}/>
 
 
+
+        <EthChart  chartData={chartData5} title={"Ethereum APY% Model (with scaling)"}/>
+          <EthChart chartData={chartData7} title={"Algorand APY% Model (with scaling)"}/>
+
+
+      </div>
+
+          <h2 className="text-lg py-5 font-bold">Maximum Profitable S:A Ratio Based on Pre-defined Issuance</h2>
+
+            <p className="pb-5">
+              The above graphs show how pre-defined issuance makes APY% return unpredictable. In reality, in the Shardeum network, APY% would likely always find some form of equilibrium; when the network is more profitable, the network would have a much higher S:A Ratio. Likewise, the S:A Ratio would reduce if the network becomes less profitable.
+
+
+  The graphs below highlight how depending on native token price action; the network could end up in the bull case (Ethereum) with an S:A ratio that is unnecessarily high and wasteful of computing resources. In the bare case (Algorand), the S:A Ratio could become so low it compromises security and could cause the network to lose its ability to scale (increase TPS).
+            </p>
+
+      <div className="flex-1 flex-col sm:flex sm:flex-row">
+
+
+
+
+          <SAChart chartData={chartData6} title={"Ethereum S:A Ratio Model (with scaling)"}/>
+          <SAChart chartData={chartData8} title={"Algorand S:A Ratio Model (with scaling)"}/>
+
+  </div>
 
   </div>);
 }

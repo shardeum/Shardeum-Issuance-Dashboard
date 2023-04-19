@@ -8,7 +8,8 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Colors
 } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import {useState} from "react";
@@ -18,7 +19,7 @@ import LineChart from ".././components/LineChart";
 import PieChart from ".././components/PieChart";
 import BarChart from ".././components/BarChart";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Colors);
 
 Chart.defaults.elements.line.borderWidth = 2;
 Chart.defaults.elements.point.radius = 2;
@@ -73,7 +74,7 @@ export default function Emissions() {
     <p className="py-5">The below graphs show SHM distribution at a token (graph 1) and percentage (graph 2) level.</p>
 
     <div className="flex-1 flex-col sm:flex sm:flex-row">
-      <BarChart plugins={[ChartDataLabels]} chartData={chartData2}/>
+      <BarChart plugins={[ChartDataLabels, Colors]} chartData={chartData2}/>
       <PieChart plugins={[ChartDataLabels]} chartData={chartData3}/>
     </div>
     <h2 className="text-lg font-bold pt-10">Shardeum Emissions</h2>

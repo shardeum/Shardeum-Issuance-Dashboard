@@ -19,7 +19,7 @@ TagManager.initialize(tagManagerArgs)
 export default function Layout({children}) {
   return (
     <HelmetProvider>
-    <Router basename="/shm-node-reward-calculator">
+    <Router basename="">
       <Helmet>
         <title>Shardeum Node reward Calculator</title>
         <meta name="description" content="Shardeum node reward calculator (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today."/>
