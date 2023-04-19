@@ -2,8 +2,8 @@ import React from "react";
 
 export default class StabilityFactor extends React.Component {
   state = {
-    SHMGenPrice: 1,
-    SHMStablePrice: 2,
+    SHMGenPrice: 5,
+    SHMStablePrice: 5,
     StakeReqSHM: 500,
     StakeReqUSD: 1000,
     TargetTxFee: 0.01,
