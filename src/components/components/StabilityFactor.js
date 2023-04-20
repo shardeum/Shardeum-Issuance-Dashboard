@@ -118,7 +118,7 @@ export default class StabilityFactor extends React.Component {
                       {this.state.TxFeeUSD.toFixed(2)}
                     </div>
                     <div className="stat-desc">
-                      TX Fee (SHM) * SHM Stable Price
+                      TX Fee (SHM) * Stable Price
                     </div>
                   </div>
                 </div>
