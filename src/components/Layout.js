@@ -21,15 +21,21 @@ export default function Layout({children}) {
     <HelmetProvider>
     <Router basename="/shm-tokenomics">
       <Helmet>
-        <title>Shardeum Node reward Calculator</title>
-        <meta name="description" content="Shardeum node reward calculator (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today."/>
-        <meta property="og:title" content="Shardeum Node reward Calculator"/>
-        <meta property="og:site_name" content="Shardeum"/>
-        <meta property="og:url" content="https://shardeum.org/"/>
-        <meta property="og:description" content="Shardeum node reward calculator (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today."/>
+        <title>SHM Tokenomics | Calculate Your Validator Earnings</title>
+        <meta name="description" content="Shardeum SHM issuance (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today"/>
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://shardeum.org"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://shardeum.org/explore/wp-content/uploads/2023/04/Shardeum-Node-Reward-Calculator.jpg"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <meta property="og:title" content="SHM Tokenomics | Calculate Your Validator Earnings"/>
+        <meta property="og:description" content="Shardeum SHM issuance (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today"/>
+        <meta property="og:image" content="https://shardeum.org/blog/wp-content/uploads/2023/04/SHM-tokenomics-min.jpg"/>
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:domain" content="shardeum.org"/>
+        <meta property="twitter:url" content="https://shardeum.org"/>
+        <meta name="twitter:title" content="SHM Tokenomics | Calculate Your Validator Earnings"/>
+        <meta name="twitter:description" content="Shardeum SHM issuance (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today"/>
+        <meta name="twitter:image" content="https://shardeum.org/blog/wp-content/uploads/2023/04/SHM-tokenomics-min.jpg" />
       </Helmet>
       <main className="main py-5 px-5 md:px-20 ml-auto mr-auto  md:max-w-[75rem]">
         <DrawerLayout/>
