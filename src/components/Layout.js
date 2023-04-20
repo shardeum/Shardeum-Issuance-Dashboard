@@ -21,7 +21,7 @@ export default function Layout({children}) {
   return (
     <HelmetProvider>
     <Router basename="/shm-tokenomics">
-      <Head>
+      <Helmet>
         <title>SHM Tokenomics | Calculate Your Validator Earnings</title>
         <meta name="description" content="Shardeum SHM issuance (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today"/>
         {/* <!-- Facebook Meta Tags --> */}
@@ -42,7 +42,7 @@ export default function Layout({children}) {
         <link rel="canonical" href="https://issuance-dashboard.vercel.app/shm-tokenomics" />
         {/* <link rel="canonical" href="https://shardeum.org/shm-tokenomics/" /> */}
 
-      </Head>
+      </Helmet>
       <main className="main py-5 px-5 md:px-20 ml-auto mr-auto  md:max-w-[75rem]">
         <DrawerLayout/>
 

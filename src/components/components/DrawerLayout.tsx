@@ -12,7 +12,7 @@ function Nav() {
     <nav className="text-gray-400 border-b-2 border-b-gray-500 sm:border-b-0">
       <div className="max-w-7xl mx-auto flex justify-between items-center sm:flex-col sm:items-start">
         <div className="flex">
-          <img src="logo.png" alt="Logo" className="w-40"/>
+          <img style={{cursor: 'pointer'}} onClick={() => window.location.href = "https://shardeum.org/"} src="logo.png" alt="Logo" className="w-40"/>
         </div>
         <div className="flex items-center justify-between h-20 sm:w-full">
           <div className="flex-1 items-center">
