@@ -189,7 +189,7 @@ export default function Emissions() {
 
 
 
-  return (<div className="App pt-5">
+  return (<div className="App pt-5 sm:pt-0">
 
 
 

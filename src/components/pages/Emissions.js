@@ -68,7 +68,7 @@ export default function Emissions() {
     ]
   });
 
-  return (<div className="App pt-5">
+  return (<div className="App pt-5 sm:pt-0">
     <h2 className="text-lg font-bold">Shardeum Distribution</h2>
     <p className="pt-5">49% of the SHM supply (248,920,000 SHM) will be given to the Foundation, Ecosystem, Team, and Sale accounts at genesis. The remaining 51% will be available as node reward, however since transaction fees are burned the maximum SHM supply of 508 million will never be reached.</p>
     <p className="py-5">The below graphs show SHM distribution at a token (graph 1) and percentage (graph 2) level.</p>

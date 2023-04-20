@@ -251,3 +251,10 @@ input[type="range"] {
     padding: 20px;
     margin: 10px;
 }
+
+
+.bug.flex-1.self-center.text-right {
+    text-decoration: underline;
+    color: white;
+    font-size: 10px;
+}

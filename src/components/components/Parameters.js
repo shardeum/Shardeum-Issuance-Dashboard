@@ -212,7 +212,7 @@ export default class AprCalc extends React.Component {
   };
 
   render() {
-    return (<> <div className = "flex flex-wrap pt-5" > <div className="flex w-50 min-w-[50%]">
+    return (<> <div className = "flex flex-wrap pt-5 sm:pt-0"> <div className="flex w-50 min-w-[50%]">
       <div className="flex-col">
         <h2>Network</h2>
 
