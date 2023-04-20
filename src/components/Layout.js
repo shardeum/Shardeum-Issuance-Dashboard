@@ -8,7 +8,6 @@ import Simulations from './pages/Simulations';
 import Parameters from './pages/Parameters';
 import DrawerLayout from "./components/DrawerLayout";
 import TagManager from 'react-gtm-module'
-import Head from "next/head";
 
 const tagManagerArgs = {
     gtmId: 'GTM-N6NTB5C',
