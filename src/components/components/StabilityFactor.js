@@ -58,7 +58,7 @@ export default class StabilityFactor extends React.Component {
     return (<>
 
       <div className="flex-1 flex-wrap flex py-5  flex-row">
-        <div className="flex flex-1 flex-col flex-wrap justify-start StabilityFactor w-full md:w-auto">
+        <div className="flex flex-1 flex-col flex-wrap justify-around StabilityFactor w-full md:w-auto">
 
 
 
@@ -82,6 +82,17 @@ export default class StabilityFactor extends React.Component {
               <div className="tooltip" data-tip="This is the target fee for a token transfer transaction. SHM transfer will be less; AMM txs will be more.">
                 <label className="input-group">
                   <input type="text" value={this.state.TargetTxFee} className="input input-bordered" id="TargetTxFee" onChange={this.onUpdate}/>
+                  <span>USD</span>
+                </label>
+              </div>
+            </div>
+            <div className="form-control min-h-200">
+              <label className="label">
+                <span className="label-text">Required Stake $</span>
+              </label>
+              <div className="tooltip" data-tip="The amount of SHM a node must stake in order to join the network. Specified in $ but staked in SHM based on price set by Stability factor. Some or all of the stake can be lost if node misbehaves or falls behind in processing. This ensures that operators run nodes on good hardware.">
+                <label className="input-group">
+                  <input type="text" value={this.state.StakeReqUSD} className="input input-bordered" id="StakeReqUSD" onChange={this.onUpdate}/>
                   <span>USD</span>
                 </label>
               </div>
@@ -123,45 +134,26 @@ export default class StabilityFactor extends React.Component {
                   </div>
                 </div>
 
+                <div className="stats shadow">
+                  <div className="stat">
+                    <div className="stat-title">Required Stake SHM</div>
+                    <div className="stat-value">
+                      {this.state.StakeReqSHM.toFixed(0)}
+                    </div>
+                    <div className="stat-desc">
+                      Required Stake (USD) / Stable Price
+                    </div>
+                  </div>
+                </div>
+
+
 
 
 
     </div>
 
 
-    <div className="flex flex-1 flex-col flex-wrap justify-start StabilityFactor w-full md:w-auto">
-  <div className="form-control min-h-200">
-    <label className="label">
-      <span className="label-text">Required Stake $</span>
-    </label>
-    <div className="tooltip" data-tip="The amount of SHM a node must stake in order to join the network. Specified in $ but staked in SHM based on price set by Stability factor. Some or all of the stake can be lost if node misbehaves or falls behind in processing. This ensures that operators run nodes on good hardware.">
-      <label className="input-group">
-        <input type="text" value={this.state.StakeReqUSD} className="input input-bordered" id="StakeReqUSD" onChange={this.onUpdate}/>
-        <span>USD</span>
-      </label>
-    </div>
-  </div>
 
-
-  <div className="stats shadow">
-    <div className="stat">
-      <div className="stat-title">Required Stake SHM</div>
-      <div className="stat-value">
-        {this.state.StakeReqSHM.toFixed(0)}
-      </div>
-      <div className="stat-desc">
-        Required Stake (USD) / Stable Price
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-</div>
   </div>
 
       </ >);
