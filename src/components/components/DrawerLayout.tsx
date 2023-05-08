@@ -19,6 +19,19 @@ function Nav() {
         Report bug / request feature
         </div>
         </div>
+        <br />
+
+        <h1 className="hidden md:block" style={{fontSize: '40px', color: 'white'}}>SHM Tokenomics</h1>
+        <br />
+        <div style={{minWidth: '190px'}}>
+          <p>
+            <a className="" style={{textDecoration: 'none'}} href="https://shardeum.org">
+              Home
+            </a>{" "}
+            / {" "}<span style={{color: 'white'}}>shm-tokenomics</span>
+          </p>
+        </div>
+
         <div className="flex items-center justify-between sm:w-full">
           <div className="flex-1 items-center">
             <div className="hidden md:block flex flex-direction-column">
