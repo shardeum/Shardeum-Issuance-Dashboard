@@ -23,7 +23,8 @@ function Nav() {
 
         <h1 className="hidden md:block" style={{fontSize: '40px', color: 'white'}}>SHM Tokenomics</h1>
         <br />
-        <div style={{minWidth: '190px'}}>
+        
+        <div className="hidden md:block" style={{minWidth: '190px'}}>
           <p>
             <a className="" style={{textDecoration: 'none'}} href="https://shardeum.org">
               Home
@@ -63,6 +64,7 @@ function Nav() {
               </ul>
             </div>
           </div>
+
           <div className="-mr-2 flex md:hidden">
             <button onClick={() => {
                 setIsOpen(!isOpen);
@@ -80,7 +82,18 @@ function Nav() {
               }
             </button>
           </div>
+
         </div>
+        
+      </div>
+
+      <div className="md:hidden" style={{minWidth: '190px', marginBottom: '20px'}}>
+          <p>
+            <a className="" style={{textDecoration: 'none'}} href="https://shardeum.org">
+              Home
+            </a>{" "}
+            / {" "}<span style={{color: 'white'}}>shm-tokenomics</span>
+          </p>
       </div>
 
       <Transition show={isOpen} enter="transition ease-out duration-100 transform" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="transition ease-in duration-75 transform" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">
