@@ -19,7 +19,7 @@ TagManager.initialize(tagManagerArgs)
 export default function Layout({children}) {
   return (
     <HelmetProvider>
-    <Router basename="/shm-tokenomics">
+    <Router basename="">
       {/* <Helmet>
         <title>SHM Tokenomics | Calculate Your Validator Earnings</title>
         <meta name="description" content="Shardeum SHM issuance (initial release) is live which will allow validators to run node reward simulations and calculate the node income. Check it out today"/>
