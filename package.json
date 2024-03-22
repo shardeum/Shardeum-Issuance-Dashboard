@@ -1,5 +1,6 @@
 {
   "name": "shardeum_simulations",
+  "homepage": "https://shardeum.org/shm-tokenomics/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
