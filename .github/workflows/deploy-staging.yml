@@ -26,4 +26,6 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: npm run build
+      env:
+          CI: ""
     - run: rsync -av --remove-source-files ~/actions-runner/_work/Shardeum-Issuance-Dashboard/Shardeum-Issuance-Dashboard/build/ /var/www/html/staging/shm-tokenomics/
