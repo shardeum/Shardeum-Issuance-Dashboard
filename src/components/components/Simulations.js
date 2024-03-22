@@ -683,7 +683,7 @@ export default class Simulations extends React.Component {
 
     return (<>
 
-      <h2 className="pt-5 sm:pt-0">Node Reward Simulations</h2>
+      <h2 className="pt-5 sm:pt-0">Node Reward Simulations 1</h2>
       <div className="flex flex-wrap pt-5" >
 
     <div className="flex flex-col chart min-w-[50%]">
